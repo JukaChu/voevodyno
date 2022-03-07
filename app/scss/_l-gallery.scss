@@ -1,0 +1,108 @@
+.lg-outer {
+  z-index: 100501 !important;
+  background-color: #fff;
+}
+.lg-outer .lg-thumb-outer {
+  background: #fff !important;
+}
+.lg-toolbar {
+  opacity: 1 !important;
+  background: #fff !important;
+}
+.lg-toolbar .lg-icon {
+  color: #212426 !important;
+}
+.lg-toolbar .lg-icon {
+  height: initial !important;
+  padding: 15px 0 15px !important;
+}
+.lg-actions .lg-next:before, #lg-counter, #lg-share, #lg-download {
+  display: none !important;
+}
+.lg-actions .lg-next, .lg-actions .lg-prev {
+  background: transparent !important;
+  opacity: 1 !important;
+}
+
+.lg-actions .lg-next:after {
+  content: url('../img/arrow-right.png') !important;
+}
+.lg-actions .lg-prev:after {
+  content: url('../img/arrow-left.png') !important;
+}
+.lg-sub-html {
+  background: #fff !important;
+  color: #000 !important;
+}
+.lg-outer .lg-toogle-thumb {
+  display: none !important;
+}
+.lg-outer .lg-thumb-item.active, .lg-outer .lg-thumb-item:hover {
+  border-color: #D5D5D5 !important;
+}
+
+.lg-actions .lg-next, .lg-actions .lg-prev {
+  &:hover {
+    &::after {
+      filter: brightness(0);
+    }
+  }
+}
+@media screen and (min-width: 1051px) {
+  .lg-sub-html {
+    font-size: 24px !important;
+    line-height: 163%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .lg-sub-html {
+    position: absolute !important;
+    top: 15px;
+    bottom: inherit !important;
+    display: inline-block;
+    background: transparent !important;
+    font-size: 16px;
+    max-width: 50%;
+    color: #000 !important;
+    width: initial !important;
+    text-align: left !important;
+  }
+  .lg-actions .lg-prev {
+    left: 15% !important;
+  }
+  .lg-actions .lg-next {
+    right: 15% !important;
+  }
+
+  .lg-toolbar .lg-icon {
+    height: initial !important;
+    padding: 30px 0 0 !important;
+  }
+
+  .lg-toolbar {
+    background: transparent !important;
+  }
+  .lg-outer .lg-thumb-outer {
+    top: 50%;
+    left: 30px;
+    transform: translate(0, -50%) !important;
+    height: initial !important;
+    max-height: 100%;
+    width: 100px !important;
+    background: transparent !important;
+  }
+  .lg-item {
+    max-width: 60% !important;
+    left: 50% !important;
+    transform: translate(-50%, 0) !important;
+    overflow: hidden;
+  }
+  .lg-outer .lg-thumb, .lg-outer .lg-thumb-outer.lg-grab .lg-thumb-item {
+    height: initial !important;
+    float: none !important;
+    transform: none !important;
+    width: 100px !important;
+    height: 100px !important;
+    padding: 0 !important;
+  }
+}
