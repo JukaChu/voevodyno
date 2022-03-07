@@ -66,6 +66,18 @@
   justify-content: center;
   padding: 20px 0;
   box-sizing: border-box;
+  .sub {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    text-align: center;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    margin-bottom: 5px;
+    font-family: $second-font;
+  }
   .tag {
     font-style: normal;
     font-weight: 500;
