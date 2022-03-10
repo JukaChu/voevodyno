@@ -489,6 +489,13 @@
   }
 }
 @media screen and (max-width: 992px) {
+  .header {
+    &.is-fixed {
+      position: sticky;
+      top: 0;
+
+    }
+  }
   .header-bottom__container {
     > .mod-reserve {
       display: flex;

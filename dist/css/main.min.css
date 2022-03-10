@@ -2277,6 +2277,10 @@ main > .container > .breadcrumbs ul li span {
     padding: 20px 0 16px; } }
 
 @media screen and (max-width: 992px) {
+  .header.is-fixed {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0; }
   .header-bottom__container > .mod-reserve {
     display: -webkit-box;
     display: -ms-flexbox;
