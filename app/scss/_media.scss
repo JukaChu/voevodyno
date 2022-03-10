@@ -148,6 +148,18 @@
 }
 
 @media screen and (max-width: 769px) {
+  .faq-page {
+    flex-direction: column;
+    margin-top: 0;
+    .faq-cont {
+      width: 100%;
+      margin-left: 0;
+    }
+  }
+  .faq-left {
+    width: 100%;
+    margin-bottom: 30px;
+  }
   .seasons {
     .container {
       .btns {

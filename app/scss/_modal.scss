@@ -62,17 +62,8 @@
     transition: visibility 0.4s ease, opacity 0.4s ease;
   }
 
-  &.modal-window--thanks {
-    .modal-container {
-      background: url("../img/choco-tnx.png") no-repeat left top / cover, #fff;
-    }
-  }
 
-  &.modal-window--comment {
-    .modal-container {
-      max-width: 450px;
-    }
-  }
+
 }
 
 .review-modal {
@@ -202,7 +193,7 @@
 }
 
 .modal-backplate {
-  background: rgba(0, 0, 0, 0.85);
+  background: rgba(0, 0, 0, 0.3);
   position: fixed;
   top: 0;
   left: 0;
@@ -213,7 +204,7 @@
 
 .modal-container {
   background: #FFFFFF;
-  padding: 69px 30px;
+  padding: 40px;
   box-sizing: border-box;
   position: relative;
   margin: auto;
@@ -222,19 +213,28 @@
   width: 100%;
   max-height: calc(100vh - 40px);
   z-index: 2;
+  border-radius: 4px;
+}
+.modal-window.modal-window--write {
+  .modal-container {
+    max-width: 440px;
+  }
 }
 
 .close-modal {
   cursor: pointer;
   position: absolute;
-  top: 19px;
-  right: 19px;
-  width: 24px;
-  height: 24px;
+  top: 14px;
+  right: 14px;
+  width: 19px;
+  height: 19px;
   box-sizing: border-box;
   padding: 3px;
   border: 1px solid rgba(255, 255, 255, 0);
   transition: border 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   img {
     width: 100%;
@@ -252,17 +252,35 @@
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
+  .line {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+    &::before, &::after {
+      height: 1px;
+      width: auto;
+      flex-grow: 1;
+      display: inline-block;
+      content: '';
+      background: #E0C18D;
+    }
+    &::before {
+      margin-right: 20px;
+    }
+    &::after {
+      margin-left: 20px;
+    }
+  }
 }
 .modal-title {
-  width: 100%;
-  text-align: center;
   font-style: normal;
-  font-weight: bold;
-  font-size: 34px;
-  line-height: 130%;
-  color: #353535;
-  margin-bottom: 30px;
-  box-sizing: border-box;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 28px;
+  text-align: center;
+  color: #3A3A3A;
 }
 
 .modal-form {
@@ -276,6 +294,9 @@
   form {
     > .btn {
       width: 100%;
+      padding: 18px;
+      box-sizing: border-box;
+      margin-top: 20px;
     }
   }
 }
@@ -392,7 +413,7 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  margin-bottom: 9px;
+  margin-bottom: 20px;
 
   font-style: normal;
   font-weight: normal;
@@ -401,30 +422,35 @@
   color: #888888;
   position: relative;
 
+  &:last-child {
+    margin-bottom: 0;
+  }
+
   input, select {
     width: 100%;
-    border: none;
-    padding: 15px 0;
+
+    padding: 14px 14px;
     box-sizing: border-box;
 
     font-style: normal;
     font-weight: normal;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 165%;
-    color: #5a5a5a;
-    border-bottom: 1px solid #D0D0D0;
-    outline: none;
-    background: rgba(255, 255, 255, 0);
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
+
+    border: 1px solid #E6E6E6;
+    border-radius: 4px;
+    font-family: $second-font;
+    color: $green;
 
     &::placeholder {
       font-style: normal;
-      font-weight: normal;
-      font-size: 14px;
-      line-height: 165%;
-      color: #888888;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 25px;
+      color: #A9A9A9;
+    }
+    &:focus, &:active {
+      border: 1px solid $green;
     }
   }
 
@@ -434,47 +460,9 @@
     text-overflow: ellipsis;
   }
 
-  &.password {
-    position: relative;
 
-    .icon {
-      position: absolute;
-      bottom: 0;
-      right: 0;
-      padding: 20px 15px;
-      box-sizing: border-box;
-      cursor: pointer;
-      height: 54px;
-      background: url("../img/pass-v.svg") no-repeat center / 22px;
-    }
 
-    &.visible {
-      .icon {
-        background: url("../img/pass-h.svg") no-repeat center / 22px;
 
-      }
-    }
-  }
-
-  .redact {
-    font-style: normal;
-    font-weight: normal;
-    font-size: 13px;
-    line-height: 120%;
-    color: #3B6D9A;
-    border-bottom: 1px dashed #3b6d9a;
-    position: absolute;
-    bottom: 38%;
-    right: 0;
-    transform: translate(0, 50%);
-    cursor: pointer;
-  }
-
-  &.edit {
-    .icon {
-      right: 100px;
-    }
-  }
 }
 
 input[type="date"] {
@@ -508,28 +496,45 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     resize: none;
     height: 90px;
     width: 100%;
-    border: none;
     padding: 15px 0;
     box-sizing: border-box;
 
     font-style: normal;
     font-weight: normal;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 165%;
-    color: #5a5a5a;
-    border-bottom: 1px solid #D0D0D0;
-    outline: none;
-    background: rgba(255, 255, 255, 0);
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
+
+    border: 1px solid #E6E6E6;
+    border-radius: 4px;
+    font-family: $second-font;
+    color: $green;
 
     &::placeholder {
       font-style: normal;
-      font-weight: normal;
-      font-size: 14px;
-      line-height: 165%;
-      color: #888888;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 25px;
+      color: #A9A9A9;
+    }
+  }
+}
+@media screen and (max-width: 600px) {
+  .modal-container {
+    padding: 30px 20px;
+  }
+  .modal-title {
+    font-size: 18px;
+    line-height: 1.2;
+  }
+  .modal-content {
+    .line {
+      margin: 15px 0;
+    }
+  }
+  .input-cont {
+    margin-bottom: 15px;
+    &:last-child {
+      margin-bottom: 0;
     }
   }
 }

@@ -547,51 +547,7 @@ $('.rating-stars').raty(
         hints: ['a', null, '', null, '', null]
     }
 );
-//add to cart, fav
-let singleCard = [...document.querySelectorAll('.single-card')];
 
-function preventSingleCard() {
-    if (singleCard.length) {
-        let timeoutHandle = setTimeout(() => {
-        }, 5000);
-        singleCard.forEach((btn) => {
-
-
-            let fav = btn.querySelector('.fav');
-            let cart = btn.querySelector('.add-cart');
-            if (cart) {
-                fav.addEventListener('click', (e) => {
-                    e.stopPropagation();
-                    e.preventDefault();
-                    fav.classList.toggle('active');
-                });
-                cart.addEventListener('click', (e) => {
-                    e.stopPropagation();
-                    e.preventDefault();
-                    cart.classList.toggle('active');
-                    if (document.querySelector('.modal-added')) {
-                        document.querySelector('.modal-added').classList.add('active');
-                        if (document.querySelector('.modal-added').classList.contains('active')) {
-                            clearTimeout(timeoutHandle);
-                            timeoutHandle = setTimeout(() => {
-                                document.querySelector('.modal-added').classList.remove('active');
-                            }, 5000);
-                        } else {
-                            timeoutHandle = setTimeout(() => {
-                                document.querySelector('.modal-added').classList.remove('active');
-                            }, 5000);
-                        }
-
-                    }
-
-                })
-            }
-
-        })
-    }
-}
-
-preventSingleCard();
 
 
 
@@ -739,6 +695,23 @@ function openCarrMod() {
     }
 }
 openCarrMod();
+
+//modals
+let writeMod = [...document.querySelectorAll('.mod--write')];
+
+function openWriteMod() {
+    if (writeMod.length) {
+        writeMod.forEach((btn) => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                document.querySelector('.modal-window--write').classList.add('active');
+                document.body.classList.add('no-scroll');
+            })
+        })
+    }
+}
+openWriteMod();
+
 
 let coopMod = [...document.querySelectorAll('.mod--coop')];
 
@@ -1088,3 +1061,13 @@ $(".go-price").click(function() {
         scrollTop: $(".prices-js").offset().top - 150
     }, 500);
 });
+//tabs control
+
+// let tabBtn = [...document.querySelectorAll('.tab-btn')];
+let tabs = [...document.querySelectorAll('.tab')];
+
+function controlTabs() {
+
+}
+
+//tabs control
