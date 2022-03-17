@@ -16,6 +16,13 @@
     transform: translate(0, -50%);
     z-index: 3;
   }
+  &.hero-default--low {
+    height: 370px;
+    margin-bottom: 15px;
+    &::after {
+      content: none;
+    }
+  }
   .bg {
     width: 100%;
     position: absolute;
@@ -183,8 +190,14 @@
 
     }
   }
+  .hero-default.hero-default--low {
+    height: 290px;
+  }
 }
 @media screen and (max-width: 600px) {
+  .hero-default.hero-default--low {
+    height: auto;
+  }
   .hero-text .tag {
     font-size: 12px;
     padding: 2px 6px;

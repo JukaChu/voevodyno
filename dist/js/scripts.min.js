@@ -273,13 +273,39 @@ function openLinkCat() {
                         btn.closest('.has-item').classList.add('open');
 
                     }
-                })
+                });
+                if (window.innerWidth < 451) {
+                    let aCol = [...btn.closest('.has-item').querySelectorAll('.menu-column > a')];
+
+                    aCol.forEach((col) => {
+                        col.addEventListener('click', (e) => {
+                            e.preventDefault();
+                            col.closest('.menu-column').classList.toggle('open');
+                        })
+                    })
+                }
             }
 
         })
     }
 }
 openLinkCat();
+//open mob lang
+
+let langMob = [...document.querySelectorAll('.hidden-cont > *.lang > a')];
+
+function openLangMenu() {
+    if (langMob.length) {
+        langMob.forEach((btn) => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                btn.closest('.lang').classList.toggle('open');
+            })
+        })
+    }
+}
+openLangMenu();
+//open mob lang
 
 //sliders
 
@@ -1071,3 +1097,41 @@ function controlTabs() {
 }
 
 //tabs control
+
+//open cat blog
+
+let btnCatBlog = [...document.querySelectorAll('.blog-cat-btn')];
+let catBlogPopup = document.querySelector('.cat-blog-popup');
+
+function openCatBlog() {
+    if (btnCatBlog.length) {
+        btnCatBlog.forEach((btn) => {
+            btn.addEventListener('click', () => {
+                catBlogPopup.classList.add('visible');
+                document.body.classList.add('no-scroll');
+            })
+        });
+        let closeBtn = catBlogPopup.querySelector('.close-cat');
+        let catCont = catBlogPopup.querySelector('.cat-blog-cont');
+
+        catBlogPopup.addEventListener('click', () => {
+            catBlogPopup.classList.remove('visible');
+            document.body.classList.remove('no-scroll');
+        });
+
+        catCont.addEventListener('click', (e) => {
+            e.stopPropagation();
+            e.preventDefault();
+        });
+        closeBtn.addEventListener('click', () => {
+            catBlogPopup.classList.remove('visible');
+            document.body.classList.remove('no-scroll');
+        });
+
+
+    }
+}
+
+openCatBlog();
+
+//open cat blog
