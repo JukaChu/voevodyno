@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=0">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" media="all" href="./libs/swiper.min.css">
+    <link rel="stylesheet" href="./css/main.min.css">
+</head>
+<body class="home">
+//= details/header.html
+
+
+<main>
+    <section class="hero-home js-slider">
+        <div class="home-hero-slider swiper-container">
+            <div class="swiper-wrapper">
+                <div class="home-hero-slide swiper-slide">
+                    <div class="img">
+
+                        <picture>
+                            <source media="(max-width:650px)" srcset="./img/home-banner-mob.jpg">
+                            <img src="./img/home-banner.jpg" alt="Flowers">
+                        </picture>
+                    </div>
+                    <div class="container">
+                        <div class="home-hero__text">
+                            <span>Активный отдых и развлечения</span>
+                            <div class="btns">
+                                <a href="#" class="btn btn--white">Подробнее</a>
+                                <div class="play-video white">
+                                    Смотреть видео
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="home-hero-slide swiper-slide">
+                    <div class="img">
+                        <picture>
+                            <source media="(max-width:650px)" srcset="./img/home-banner-mob.jpg">
+                            <img src="./img/home-banner.jpg" alt="Flowers">
+                        </picture>
+                    </div>
+                    <div class="container">
+                        <div class="home-hero__text">
+                            <span>Активный отдых и развлечения</span>
+                            <div class="btns">
+                                <a href="#" class="btn btn--white">Подробнее</a>
+                                <div class="play-video white">
+                                    Смотреть видео
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="btns">
+                <div class="container">
+                    <div class="slides-btn slides-btn--prev">
+                        <svg width="21" height="16" viewBox="0 0 21 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9 1L2 8L9 15" stroke-width="2"/>
+                            <path d="M3 8H21" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <div class="slides-btn slides-btn--next">
+                        <svg width="21" height="16" viewBox="0 0 21 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9 1L2 8L9 15" stroke-width="2"/>
+                            <path d="M3 8H21" stroke-width="2"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <section class="booking">
+        <div class="container">
+            <div class="booking__container">
+                <div class="text">
+                    <p>Бронирование номеров</p>
+                    <span>Гарантированное заселение</span>
+                </div>
+                <div class="booking-form">
+                    <div class="booking-input date">
+                        <div class="over">
+                            <span>Заезд</span>
+                        </div>
+                        <input type="date">
+                    </div>
+                    <div class="booking-input date">
+                        <div class="over">
+                            <span>Выезд</span>
+                        </div>
+                        <input type="date">
+                    </div>
+                    <div class="booking-input ">
+                        <div class="over">
+                            <span>Гости</span>
+                        </div>
+                        <input type="number" min="1" value="1">
+                    </div>
+                    <button class="btn btn--orange">
+                        Найти номер
+                    </button>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <section class="mini-catalog">
+        <div class="container">
+            <div class="mini-catalog__container">
+                <div class="left">
+                    <div class="bg">
+                        <img class="lazyload" data-src="./img/w-green-for.svg" alt="">
+
+                    </div>
+                    <div class="content">
+                        <span class="curved">
+                            Cпециальные предложения
+                        </span>
+                        <p>Каждое время года раскрашивает отдых в «Воеводино» неповторимыми красками, и чтобы Вы увидели
+                            каждую из них, мы регулярно предлагаем сезонные акции.</p>
+
+                        <a href="" class="btn btn--trans">Смотреть все</a>
+
+                    </div>
+
+                </div>
+                <div class="mini-cat__slider js-slider">
+                    <div class="mini-cat__slider-head">
+                        <div class="btns">
+
+
+                            <div class="slides-btn slides-btn--prev">
+                                <svg width="21" height="16" viewBox="0 0 21 16" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9 1L2 8L9 15" stroke-width="2"/>
+                                    <path d="M3 8H21" stroke-width="2"/>
+                                </svg>
+                            </div>
+                            <div class="slider-pagin">
+
+                            </div>
+                            <div class="slides-btn slides-btn--next">
+                                <svg width="21" height="16" viewBox="0 0 21 16" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9 1L2 8L9 15" stroke-width="2"/>
+                                    <path d="M3 8H21" stroke-width="2"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mini-cat__slider-container swiper-container">
+                        <div class="swiper-wrapper">
+
+
+                            <a href="" class="single-mini-cat swiper-slide">
+                                <div class="img">
+                                    <img class="lazyload" data-src="./img/mn-1.jpg" alt="">
+                                </div>
+                                <div class="text">
+                                    <p class="date">
+                                        12.11.21 - 28.11.21
+                                    </p>
+                                    <span class="name">Специальное предложение «Отдыхай больше – плати меньше»</span>
+                                    <p class="op">Знаем, что для того чтобы все увидеть и попробовать в Воеводино даже
+                                        двух дней мало. </p>
+
+
+                                </div>
+                            </a>
+                            <a href="" class="single-mini-cat swiper-slide">
+                                <div class="img">
+                                    <img class="lazyload" data-src="./img/mn-2.jpg" alt="">
+                                </div>
+                                <div class="text">
+                                    <p class="date">
+                                        12.11.21 - 28.11.21
+                                    </p>
+                                    <span class="name">Раннее бронирование – скидка 15%. Планируйте отдых заранее!</span>
+                                    <p class="op">Получите гарантированную скидку 15% на любой номер при бронировании от
+                                        3-х ночей более чем за 30 дней до заезда.</p>
+
+
+                                </div>
+                            </a>
+                            <a href="" class="single-mini-cat swiper-slide">
+                                <div class="img">
+                                    <img class="lazyload" data-src="./img/mn-3.jpg" alt="">
+                                </div>
+                                <div class="text">
+                                    <p class="date">
+                                        12.11.21 - 28.11.21
+                                    </p>
+                                    <span class="name">Семейное предложение</span>
+                                    <p class="op">Если вы любите путешествовать всей семьей, то Воеводино это тот,
+                                        загородный отель, где стоит провести семейный отпуск.</p>
+
+
+                                </div>
+                            </a>
+                            <a href="" class="single-mini-cat swiper-slide">
+                                <div class="img">
+                                    <img class="lazyload" data-src="./img/mn-1.jpg" alt="">
+                                </div>
+                                <div class="text">
+                                    <p class="date">
+                                        12.11.21 - 28.11.21
+                                    </p>
+                                    <span class="name">Специальное предложение «Отдыхай больше – плати меньше»</span>
+                                    <p class="op">Знаем, что для того чтобы все увидеть и попробовать в Воеводино даже
+                                        двух дней мало. </p>
+
+
+                                </div>
+                            </a>
+                            <a href="" class="single-mini-cat swiper-slide">
+                                <div class="img">
+                                    <img class="lazyload" data-src="./img/mn-2.jpg" alt="">
+                                </div>
+                                <div class="text">
+                                    <p class="date">
+                                        12.11.21 - 28.11.21
+                                    </p>
+                                    <span class="name">Раннее бронирование – скидка 15%. Планируйте отдых заранее!</span>
+                                    <p class="op">Получите гарантированную скидку 15% на любой номер при бронировании от
+                                        3-х ночей более чем за 30 дней до заезда.</p>
+
+
+                                </div>
+                            </a>
+                            <a href="" class="single-mini-cat swiper-slide">
+                                <div class="img">
+                                    <img class="lazyload" data-src="./img/mn-3.jpg" alt="">
+                                </div>
+                                <div class="text">
+                                    <p class="date">
+                                        12.11.21 - 28.11.21
+                                    </p>
+                                    <span class="name">Семейное предложение</span>
+                                    <p class="op">Если вы любите путешествовать всей семьей, то Воеводино это тот,
+                                        загородный отель, где стоит провести семейный отпуск.</p>
+
+
+                                </div>
+                            </a>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <section class="leaving-block">
+        <div class="container">
+            <div class="leaving-block__container">
+                <span class="sub-title">
+ПРИСЛУШАЙСЯ К СЕБЕ
+                </span>
+                <p class="title">Проживание</p>
+                <div class="card-about">
+                    <div class="img">
+                        <img class="lazyload" data-src="./img/ab-im-1.jpg" alt="">
+                    </div>
+                    <div class="additional">
+                        <p>Дополнительно</p>
+                        <div class="text">
+                            <ul>
+                                <li>Завтрак</li>
+                                <li>Тренажерный зал</li>
+                                <li>Барбекю</li>
+                                <li> Бассейн</li>
+                                <li>Wi-Fi</li>
+                            </ul>
+                            <a href="" class="btn btn--trans">Узнать больше</a>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="restaurants">
+        <div class="container">
+            <div class="restaurants__container">
+                <div class="left">
+                    <div class="img">
+                        <img class="lazyload" data-src="./img/hm-1.jpg" alt="">
+                    </div>
+                    <div class="mob">
+                        <div class="btns">
+                            <a href="#" class="btn btn--trans">Узнать больше</a>
+                            <div class="play-video">
+                                Смотреть видео
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="right">
+                    <span class="sub-title">ВСЕ НА ВАШ ВКУС</span>
+                    <p class="title">
+                        Рестораны
+                    </p>
+                    <p>Хочется посидеть за чашечкой ароматного кофе или расслабиться с друзьями, потягивая коктейль?</p>
+                    <p>Тогда вам сюда – в один из наших трех ресторанов.</p>
+                    <p>Наши рестораны удобно располагаются по всей территории курорта «Воеводино» и в каждом из них для
+                        нашего гостя найдется угощение и занятие по душе.</p>
+
+                    <div class="btns">
+                        <a href="#" class="btn btn--trans">Узнать больше</a>
+                        <div class="play-video">
+                            Смотреть видео
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="restaurants">
+        <div class="container">
+            <div class="restaurants__container restaurants__container--reverse">
+                <div class="left">
+                    <div class="img">
+                        <img class="lazyload" data-src="./img/hm-2.jpg" alt="">
+                    </div>
+                    <div class="mob">
+                        <div class="btns">
+                            <a href="#" class="btn btn--trans">Узнать больше</a>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="right">
+                    <span class="sub-title">НАЙДИТЕ ОТДЫХ ДЛЯ СЕБЯ</span>
+                    <p class="title">
+                        Развлечения
+                    </p>
+                    <p>Живописные виды, чистейший воздух и разнообразие возможностей для активного отдыха в «Воеводино»
+                        сделают Ваш отдых незабываемым</p>
+                    <div class="btns">
+                        <a href="#" class="btn btn--trans">Узнать больше</a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="faq-home">
+        <div class="container">
+            <div class="faq-home__container">
+                <div class="left">
+                    <p class="title">
+                        Часто задаваемые вопросы
+                    </p>
+                    <p>Здесь вы можете найти ответы на возникшие вопросы</p>
+                    <a href="" class="btn btn--trans">Смотреть все</a>
+
+                </div>
+                <div class="faq-cont">
+                    <div class="faq-list">
+                        <div class="single-faq">
+                            <div class="faq-head">
+                                Всюду ли можно рассчитываться кредитной картой?
+                            </div>
+                            <div class="faq-text">
+                                <p>Да, кроме форелевого хозяйства и квадроциклов. </p>
+                            </div>
+                        </div>
+                        <div class="single-faq">
+                            <div class="faq-head">
+                                Разрешено ли проживание с животными?
+                            </div>
+                            <div class="faq-text">
+                                <p>Да, кроме форелевого хозяйства и квадроциклов. </p>
+                                <p>Да, кроме форелевого хозяйства и квадроциклов. </p>
+                            </div>
+                        </div>
+                        <div class="single-faq">
+                            <div class="faq-head">
+                                Возможен ли ранний заезд или поздний выезд?
+                            </div>
+                            <div class="faq-text">
+                                <p>Да, кроме форелевого хозяйства и квадроциклов. </p>
+                            </div>
+                        </div>
+                        <div class="single-faq">
+                            <div class="faq-head">
+                                Есть ли на территории курорта магазин?
+                            </div>
+                            <div class="faq-text">
+                                <p>Да, кроме форелевого хозяйства и квадроциклов. </p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="seasons js-slider">
+        <div class="container">
+            <div class="line">
+                <img src="./img/curv-line.svg" alt="">
+            </div>
+            <p class="title">
+                Четыре сезона на курорте «Воеводино»
+            </p>
+            <div class="btns">
+                <div class="slides-btn slides-btn--prev">
+                    <svg width="21" height="16" viewBox="0 0 21 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9 1L2 8L9 15" stroke-width="2"/>
+                        <path d="M3 8H21" stroke-width="2"/>
+                    </svg>
+                </div>
+                <div class="slides-btn slides-btn--next">
+                    <svg width="21" height="16" viewBox="0 0 21 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9 1L2 8L9 15" stroke-width="2"/>
+                        <path d="M3 8H21" stroke-width="2"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
+        <div class="seasons-container swiper-container">
+            <div class="swiper-wrapper">
+                <a href="" class="single-season swiper-slide">
+                    <div class="img">
+                        <img class="lazyload" data-src="./img/vesna.jpg" alt="">
+                    </div>
+                    <div class="text">
+
+                        <span>Весна</span>
+                        <p>Именно в Карпатах можно спрятаться от серости больших городов и увидеть ту самую,
+                            по-журнальному красивую весну.</p>
+                    </div>
+
+                </a>
+                <a href="" class="single-season swiper-slide">
+                    <div class="img">
+                        <img class="lazyload" data-src="./img/zima.jpg" alt="">
+                    </div>
+                    <div class="text">
+
+                        <span>Зима</span>
+                        <p>Именно в Карпатах можно спрятаться от серости больших городов и увидеть ту самую,
+                            по-журнальному красивую весну.</p>
+                    </div>
+
+                </a>
+                <a href="" class="single-season swiper-slide">
+                    <div class="img">
+                        <img class="lazyload" data-src="./img/leto.jpg" alt="">
+                    </div>
+                    <div class="text">
+
+                        <span>Лето</span>
+                        <p>Именно в Карпатах можно спрятаться от серости больших городов и увидеть ту самую,
+                            по-журнальному красивую весну.</p>
+                    </div>
+
+                </a>
+                <a href="" class="single-season swiper-slide">
+                    <div class="img">
+                        <img class="lazyload" data-src="./img/osen.jpg" alt="">
+                    </div>
+                    <div class="text">
+
+                        <span>Осень</span>
+                        <p>Именно в Карпатах можно спрятаться от серости больших городов и увидеть ту самую,
+                            по-журнальному красивую весну.</p>
+                    </div>
+
+                </a>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+
+//= details/footer.html
+//= details/scripts.html
+
+</body>
+</html>

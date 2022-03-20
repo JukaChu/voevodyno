@@ -1,0 +1,335 @@
+@media screen and (max-width: 1332px) {
+  .mini-catalog__container .left .bg {
+    width: calc(100% + 16px);
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .restaurants__container {
+
+    .left {
+      width: calc(40% - 10px);
+      .img {
+        height: 260px;
+      }
+    }
+
+    .right {
+      width: calc(60% - 10px);
+    }
+  }
+  .booking-input input {
+
+  }
+  .booking__container .text {
+    margin-right: 6%;
+  }
+  .booking__container .text p {
+    margin-bottom: 0;
+  }
+  .booking-form {
+    gap: 20px;
+  }
+  .faq-home__container {
+    .left {
+      width: calc(40% - 10px);
+    }
+    .faq-cont {
+      width: calc(60% - 10px);
+    }
+  }
+}
+@media screen and (max-width: 1023px) {
+  .mini-cat__slider-head {
+    margin-bottom: 30px;
+  }
+  .mini-catalog {
+    margin: 32px 0 30px;
+  }
+  .booking__container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 30px 20px;
+    .text {
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 20px;
+      align-items: center;
+      p {
+        text-align: center;
+      }
+      span {
+        text-align: center;
+      }
+    }
+  }
+  .booking-form {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 992px) {
+  .faq-home__container {
+    flex-direction: column;
+    gap: 35px;
+    .left , .faq-cont {
+      width: 100%;
+    }
+  }
+  .faq-home__container .left p:not(.title) {
+    margin-bottom: 35px;
+  }
+  .restaurants__container.restaurants__container--reverse {
+    flex-direction: column-reverse;
+
+  }
+  .restaurants__container {
+    flex-direction: column-reverse;
+    .left {
+      width: 100%;
+      .img {
+        height: 260px;
+      }
+      .btns {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        margin-top: 20px;
+
+        gap: 35px;
+      }
+    }
+
+    .right {
+      width: 100%;
+      padding: 0;
+      .btns {
+        display: none;
+      }
+    }
+  }
+  .card-about .img {
+    height: 330px;
+  }
+  .leaving-block__container .title {
+    margin-bottom: 20px;
+  }
+  .mini-cat__slider-head  {
+    margin-top: 30px;
+    .btns {
+      transform: none;
+    }
+  }
+  .mini-catalog__container .left .content {
+    padding: 40px 16px 127px 0;
+
+  }
+  .mini-catalog__container .left .content p {
+    margin-bottom: 35px;
+  }
+  .mini-catalog__container .left .bg img {
+
+  }
+  .mini-catalog__container {
+    flex-direction: column;
+    align-items: flex-start;
+    .left {
+      width: calc(100% + 16px);
+      margin-right: -16px;
+      .bg {
+        border-radius: 0;
+      }
+    }
+  }
+  .mini-cat__slider {
+    width: 100%;
+    z-index: 2;
+  }
+}
+
+@media screen and (max-width: 769px) {
+  .faq-page {
+    flex-direction: column;
+    margin-top: 0;
+    .faq-cont {
+      width: 100%;
+      margin-left: 0;
+    }
+  }
+  .faq-left {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  .seasons {
+    .container {
+      .btns {
+        display: block;
+      }
+  }
+}
+  .single-season {
+    padding-top: calc(100% / 3);
+    .text {
+      &::before {
+        bottom: 0;
+      }
+    }
+  }
+}
+@media screen and (max-width: 767px) {
+  .restaurants__container .left .img {
+    height: 230px;
+  }
+  .restaurants__container .left {
+    .btns {
+      margin-top: 35px;
+    }
+  }
+  .restaurants {
+    margin: 36px 0;
+  }
+  .faq-home {
+    margin: 30px 0 90px;
+  }
+  .seasons .container .title {
+    margin: 26px 0 19px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .restaurants__container {
+    gap: 5px;
+  }
+  .booking-form {
+    flex-wrap: wrap;
+    .btn {
+      flex-grow: 0;
+      width: calc(50% - 10px);
+    }
+  }
+  .booking-input,  .booking-input.date {
+    flex-grow: 0;
+    width: calc(50% - 10px);
+  }
+}
+@media screen and (max-width: 600px) {
+
+    .single-season {
+      padding-top: calc(100% / 2);
+    }
+
+  .faq-head::before, .faq-head::after {
+    top: 34px;
+    right: 0;
+  }
+  .faq-head {
+    padding: 10px 15px 10px 0;
+  }
+  .faq-text {
+    padding: 0;
+  }
+  .single-faq.active {
+    .faq-text {
+      padding: 0 0 15px 0;
+    }
+  }
+  .card-about .img {
+    height: 250px;
+  }
+  .leaving-block__container {
+    align-items: flex-start;
+    .title, .sub-title {
+      text-align: left;
+    }
+  }
+  .card-about .text ul {
+    gap: 15px;
+  }
+  .card-about .additional {
+    padding: 20px;
+
+    .text {
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+    }
+
+  }
+}
+@media screen and (max-width: 510px) {
+  .restaurants__container .left .btns {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .booking-input, .booking-form .btn, .booking-input.date {
+    width: 100%;
+  }
+  .booking__container {
+    transform: translate(0, -38px);
+  }
+}
+@media screen and (max-width: 450px) {
+  .single-season {
+    padding-top: 127%;
+    .text {
+      p {
+        opacity: 1;
+        transform: translate(0, 0);
+      }
+    }
+  }
+  .card-about .img {
+    height: 155px;
+  }
+  .card-about .additional p {
+    display: none;
+  }
+  .mini-cat__slider-container {
+    width: calc(100% + 32px);
+    margin-left: -16px;
+    margin-right: -16px;
+    padding-left: 16px;
+    padding-right: 16px;
+    box-sizing: border-box;
+  }
+  .mini-catalog__container .left .content {
+    padding-bottom: 213px;
+  }
+  .mini-cat__slider {
+    margin-top: -178px;
+  }
+  .mini-cat__slider-head {
+    margin-top: 0;
+    margin-bottom: 30px;
+  }
+  .single-mini-cat {
+    width: 273px;
+  }
+  .mini-cat__slider-head .btns {
+    justify-content: flex-start;
+    gap: 58px;
+    .slides-btn {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      border: 1px solid #3A3A3A;
+      svg {
+        width: 18px;
+      }
+    }
+    &::before {
+      display: none;
+    }
+  }
+  .mini-catalog__container .left {
+    .bg img{
+      display: none;
+    }
+  }
+  .mini-cat__slider-head {
+    .slider-pagin {
+      display: none;
+    }
+  }
+
+}

@@ -477,6 +477,58 @@ instaSlider();
 
 //insta gallery
 
+//blog gallery
+let blogGallery = [...document.querySelectorAll('.blog-slider.js-slider')];
+
+function blogSlider() {
+    if (!blogGallery.length) {
+
+    } else {
+        blogGallery.forEach((sld) => {
+            let sldCont = sld.querySelector('.blog-slider__cont');
+            let sldNext = sld.querySelector('.slides-btn--next');
+            let sldPrev = sld.querySelector('.slides-btn--prev');
+
+            const swiper2 = new Swiper(sldCont, {
+                // Optional parameters
+                loop: false,
+                slidesPerView: 'auto',
+                slidesPerGroup: 1,
+                speed: 600,
+
+                autoplay: false,
+                spaceBetween: 20,
+                navigation: {
+                    nextEl: sldNext,
+                    prevEl: sldPrev,
+                },
+                breakpoints: {
+                    // when window width is >= 320px
+
+                    // when window width is >= 480px
+
+
+                    600: {
+                        slidesPerView: 2,
+                    },
+
+
+                    1280: {
+                        slidesPerView:3,
+                    }
+                }
+
+
+
+            });
+        })
+    }
+}
+
+blogSlider();
+
+//blog gallery
+
 //four seasons
 let fourSesons = [...document.querySelectorAll('.seasons.js-slider')];
 
