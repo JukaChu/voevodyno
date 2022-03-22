@@ -395,7 +395,7 @@ input[type=number] {
   margin-left: auto;
   margin-right: auto;
   transform: translate(0, -50%);
-  z-index: 2;
+  z-index: 3;
   position: relative;
 
   background: #FFFFFF;
@@ -1503,6 +1503,7 @@ main > .container {
 @import "l-gallery";
 @import "blo";
 @import "about";
+@import "contacs";
 .item-tab {
   display: none;
 

@@ -65,7 +65,7 @@
   justify-content: center;
 }
 .hero-text {
-  max-width: 439px;
+  max-width: 674px;
   width: 100%;
   display: inline-flex;
   flex-direction: column;
@@ -125,6 +125,12 @@
 
 
 }
+@media screen and (min-width: 750px) {
+  .hero-text .btns {
+    max-width: 439px;
+  }
+}
+
 .hero-double-btn {
   width: 100%;
   display: flex;
@@ -145,6 +151,7 @@
 }
 .hero-word {
   text-align: center;
+  max-width: 439px;
 
   font-style: normal;
   font-weight: normal;
@@ -156,7 +163,51 @@
   margin-bottom: 60px;
 
 }
-
+.hero-sizes {
+  width: 100%;
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  margin-top: 70px;
+}
+.single-size {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: calc(100% / 3);
+  .img {
+    width: 38px;
+    height: 38px;
+    margin-bottom: 8px;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  p {
+    font-family: $second-font;
+    margin: 0;
+    padding: 0;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    text-align: center;
+    color: #FFFFFF;
+  }
+}
+.hero-default.hero-contacts {
+  margin-bottom: 0;
+  .hero-text {
+    max-width: 635px;
+    .hero-title {
+      & + .btn {
+        margin-top: 40px;
+      }
+    }
+  }
+}
 @media screen and (max-width: 1400px) {
   .hero-default {
     height: 370px;
