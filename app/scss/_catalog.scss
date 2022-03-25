@@ -710,6 +710,55 @@
         height: 100%;
         object-fit: cover;
       }
+      &.video {
+        padding-top: 56.2%;
+        &::after {
+          width: 96px;
+          height: 96px;
+          box-sizing: border-box;
+          border-radius: 50%;
+          box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 1);
+          border: 15px solid rgba(255, 255, 255, 0.3);
+          display: inline-block;
+          cursor: pointer;
+          content: '';
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          transition: border 0.4s ease;
+
+        }
+
+        &::before {
+          z-index: 2;
+          position: absolute;
+          width: 20px;
+          height: 23px;
+          background: url("../img/play-orange.svg") no-repeat center / 100%;
+          display: inline-block;
+          content: '';
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          transition: width 0.3s ease, height 0.3s ease;
+        }
+
+        &:hover {
+          &::after {
+            border: 0 solid rgba(255, 255, 255, 0.3);
+            transition: border 0.4s ease;
+
+          }
+
+          &::before {
+            width: 30px;
+            height: 34px;
+            transition: width 0.3s ease, height 0.3s ease;
+
+          }
+        }
+      }
     }
   }
 
