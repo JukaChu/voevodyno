@@ -527,6 +527,53 @@ blogSlider();
 
 //blog gallery
 
+//photo gallery
+let photoGallery = [...document.querySelectorAll('.photo-slider.js-slider')];
+
+function photoSlider() {
+    if (!photoGallery.length) {
+
+    } else {
+        photoGallery.forEach((sld) => {
+            let sldCont = sld.querySelector('.photo-slider__cont');
+            let sldNext = sld.querySelector('.slides-btn--next');
+            let sldPrev = sld.querySelector('.slides-btn--prev');
+
+            const swiper2 = new Swiper(sldCont, {
+                // Optional parameters
+                loop: false,
+                slidesPerView: 'auto',
+                slidesPerGroup: 1,
+                speed: 600,
+
+                autoplay: false,
+                spaceBetween: 20,
+                navigation: {
+                    nextEl: sldNext,
+                    prevEl: sldPrev,
+                },
+                breakpoints: {
+                    // when window width is >= 320px
+
+                    // when window width is >= 480px
+
+
+                    600: {
+                        slidesPerView: 2,
+                    },
+
+                }
+
+
+            });
+        })
+    }
+}
+
+photoSlider();
+
+//photo gallery
+
 //four seasons
 let fourSesons = [...document.querySelectorAll('.seasons.js-slider')];
 

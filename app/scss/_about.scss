@@ -23,6 +23,19 @@
     left: 50%;
     transform: translate(-50%, 0);
   }
+  b {
+    font-family: $second-font;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    text-align: center;
+    letter-spacing: 0.05em;
+    color: #A9A9A9;
+    display: inline-block;
+    margin-bottom: 5px;
+    width: 100%;
+  }
   span {
     font-style: normal;
     font-weight: 600;
@@ -167,6 +180,9 @@
 .about-banner {
   width: 100%;
   position: relative;
+  & + .popular-rest {
+    margin-top: 100px;
+  }
   .bg {
     position: absolute;
     top: 0;
@@ -231,6 +247,9 @@
   }
 }
 @media screen and (max-width: 1200px) {
+  .about-banner + .popular-rest {
+    margin-top: 60px;
+  }
   .iframe-map {
 
   }
@@ -275,6 +294,9 @@
   }
 }
 @media screen and (max-width: 767px) {
+  .about-banner + .popular-rest {
+    margin-top: 40px;
+  }
   .about-gallery {
     margin-bottom: 20px;
   }
