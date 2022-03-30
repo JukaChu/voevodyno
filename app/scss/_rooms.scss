@@ -435,6 +435,7 @@ main > .container > .about-head {
 
   }
 }
+
 .gallery-page {
   width: 100%;
   margin: 110px 0;
@@ -632,6 +633,7 @@ main > .container > .about-head {
         padding-top: 38%;
         margin-top: -11%;
       }
+
       &:nth-child(8n - 1) {
         padding-top: 27%;
         margin-top: 0;
@@ -664,14 +666,15 @@ main > .container > .about-head {
     margin: 50px 0 40px;
   }
   .room-additive {
-    margin-top: 40px;
+    margin-top: 60px;
   }
   .room-info {
     margin-bottom: 40px;
   }
+
   .hero-sizes {
-    margin-top: 10px;
-    margin-bottom: 40px;
+    margin-top: 70px;
+    margin-bottom: 50px;
   }
   .photo-slider__cont {
     margin-top: 20px;
@@ -689,13 +692,15 @@ main > .container > .about-head {
     height: 290px;
   }
   .rest-list {
-    gap: 20px;
+    gap: 50px;
   }
   .single-rest .text > p {
-    display: none;
+    font-size: 16px;
+    line-height: 1.2;
+    margin: 20px 0;
   }
   .single-rest .text > span {
-    font-size: 20px;
+    font-size: 28px;
     margin-bottom: 0;
   }
   .single-rest .bot {
@@ -711,6 +716,9 @@ main > .container > .about-head {
       line-height: 1.2;
     }
   }
+  .single-rest .img {
+    padding-top: 57%;
+  }
   .additive-room {
     padding: 20px 0;
     flex-direction: column;
@@ -719,16 +727,60 @@ main > .container > .about-head {
 
     .left {
       width: 100%;
-      margin-bottom: 10px;
+      margin-bottom: 0;
+      position: relative;
+      padding-right: 15px;
 
       p {
-        text-align: center;
+        text-align: left;
+      }
+
+      &::before, &::after {
+        width: 14px;
+        height: 1px;
+        background: #23514C;
+        display: inline-block;
+        content: '';
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translate(0, 0);
+      }
+
+      &::after {
+        transform: rotate(90deg);
+      }
+
+
+
+    }
+    &.open {
+      padding-bottom: 40px;
+
+      .left {
+        &::after {
+          opacity: 0;
+        }
+
+        &::before {
+          background: #E0C18D;
+        }
+      }
+
+      .right {
+        padding-top: 15px;
+        max-height: 1200px;
+        transition: max-height 1.2s ease;
+
       }
     }
-
     .right {
       width: 100%;
       margin: 0;
+      max-height: 0;
+      margin-top: 0;
+      overflow: hidden;
+      transition: max-height 0.7s ease, margin-top 0.4s ease;
     }
   }
   .photo-slide {
@@ -742,6 +794,9 @@ main > .container > .about-head {
 }
 
 @media screen and (max-width: 525px) {
+  .hero-default {
+    min-height: 494px;
+  }
   .restaurant-preview {
     padding-top: 50px;
   }
@@ -763,5 +818,9 @@ main > .container > .about-head {
   }
   .single-rest {
     width: 100%;
+  }
+  .hero-text .btn {
+    width: auto;
+    min-width: 220px;
   }
 }

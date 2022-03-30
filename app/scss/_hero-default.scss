@@ -3,6 +3,7 @@
   position: relative;
   height: 494px;
   margin-bottom: 80px;
+
   &::after {
     width: 100%;
     height: 64px;
@@ -16,13 +17,16 @@
     transform: translate(0, -50%);
     z-index: 3;
   }
+
   &.hero-default--low {
     height: 370px;
     margin-bottom: 15px;
+
     &::after {
       content: none;
     }
   }
+
   .bg {
     width: 100%;
     position: absolute;
@@ -31,6 +35,7 @@
     bottom: 0;
     right: 0;
     overflow: hidden;
+
     &::after {
       z-index: 2;
       position: absolute;
@@ -42,12 +47,14 @@
       display: inline-block;
       background: rgba(0, 0, 0, 0.3);
     }
+
     img, video {
       width: 100%;
       height: 100%;
       object-fit: cover;
     }
   }
+
   .container {
     position: relative;
     z-index: 2;
@@ -56,6 +63,7 @@
     flex-direction: column;
   }
 }
+
 .hero-text__container {
   width: 100%;
   height: auto;
@@ -64,6 +72,7 @@
   align-items: center;
   justify-content: center;
 }
+
 .hero-text {
   max-width: 674px;
   width: 100%;
@@ -73,6 +82,7 @@
   justify-content: center;
   padding: 20px 0;
   box-sizing: border-box;
+
   .sub {
     font-style: normal;
     font-weight: 500;
@@ -85,6 +95,7 @@
     margin-bottom: 5px;
     font-family: $second-font;
   }
+
   .tag {
     font-style: normal;
     font-weight: 500;
@@ -99,23 +110,28 @@
     border-radius: 4px;
     background: #E0C18D;
   }
+
   .btns {
     width: 100%;
     display: flex;
     align-items: stretch;
     justify-content: flex-start;
+
     .btn {
       width: 50%;
+
       &:nth-child(1) {
         border-top-right-radius: 0;
         border-bottom-right-radius: 0;
       }
+
       &:nth-child(2) {
         border-top-left-radius: 0;
         border-bottom-left-radius: 0;
       }
     }
   }
+
   .btn {
     width: auto;
     display: inline-flex;
@@ -123,8 +139,8 @@
   }
 
 
-
 }
+
 @media screen and (min-width: 750px) {
   .hero-text .btns {
     max-width: 439px;
@@ -136,10 +152,12 @@
   display: flex;
   align-content: stretch;
   justify-content: flex-start;
+
   .btn {
-    width:50%;
+    width: 50%;
   }
 }
+
 .hero-title {
   font-style: normal;
   font-weight: normal;
@@ -149,6 +167,7 @@
   color: #FFFFFF;
   margin-bottom: 15px;
 }
+
 .hero-word {
   text-align: center;
   max-width: 439px;
@@ -163,6 +182,7 @@
   margin-bottom: 60px;
 
 }
+
 .hero-sizes {
   width: 100%;
   display: flex;
@@ -170,21 +190,25 @@
   justify-content: space-between;
   margin-top: 70px;
 }
+
 .single-size {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
   width: calc(100% / 3);
+
   .img {
     width: 38px;
     height: 38px;
     margin-bottom: 8px;
+
     img {
       width: 100%;
       height: 100%;
     }
   }
+
   p {
     font-family: $second-font;
     margin: 0;
@@ -197,10 +221,13 @@
     color: #FFFFFF;
   }
 }
+
 .hero-default.hero-contacts {
   margin-bottom: 0;
+
   .hero-text {
     max-width: 635px;
+
     .hero-title {
       & + .btn {
         margin-top: 40px;
@@ -208,11 +235,13 @@
     }
   }
 }
+
 @media screen and (max-width: 1400px) {
   .hero-default {
     height: 370px;
   }
 }
+
 @media screen and (max-width: 1220px) {
   .hero-default {
     height: 330px;
@@ -227,6 +256,7 @@
     margin-bottom: 37px;
   }
 }
+
 @media screen and (max-width: 1170px) {
   .hero-default {
     height: 276px;
@@ -236,6 +266,7 @@
 @media screen and (max-width: 992px) {
   .hero-default {
     margin-bottom: 50px;
+
     &::after {
       height: 40px;
 
@@ -245,6 +276,7 @@
     height: 290px;
   }
 }
+
 @media screen and (max-width: 600px) {
   .hero-default.hero-default--low {
     height: auto;
@@ -263,22 +295,27 @@
     width: 100%;
   }
 }
+
 @media screen and (max-width: 500px) {
   .hero-default {
     height: auto;
   }
   .hero-text .btns {
     flex-direction: column;
+
     .btn {
-      width: 100%;
-      &:nth-child(1) {
-        border-top-right-radius: 4px;
-        border-bottom-left-radius: 0;
-      }
-      &:nth-child(2) {
-        border-top-right-radius: 0;
-        border-bottom-left-radius: 4px;
+      width: auto;
+      min-width: 220px;
+      margin-bottom: 20px;
+      border-radius: 4px !important;
+
+      &:last-child {
+        margin-bottom: 0;
       }
     }
+  }
+  .hero-text {
+    padding-top: 50px;
+    padding-bottom: 40px;
   }
 }

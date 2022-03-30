@@ -944,6 +944,58 @@ function openCatBlog() {
 openCatBlog();
 
 //open cat blog
+//open price catalog
+
+let opener = [...document.querySelectorAll('.event-single-price > p')];
+
+function openPriceCatalog() {
+    if (opener.length) {
+        opener.forEach((btn) => {
+            btn.addEventListener('click', () => {
+                btn.closest('.event-single-price').classList.toggle('open');
+            })
+        })
+    }
+}
+
+openPriceCatalog();
+
+//open price catalog
+//open price service
+
+let openerServicePrice = [...document.querySelectorAll('.additive-room .left')];
+
+function openServicepPrice() {
+    if (openerServicePrice.length) {
+        openerServicePrice.forEach((btn) => {
+            btn.addEventListener('click', () => {
+                btn.closest('.additive-room').classList.toggle('open');
+            })
+        })
+    }
+}
+
+openServicepPrice();
+
+//open price service
+//open services list
+
+
+let openerList = [...document.querySelectorAll('.catalog-head__list.dropdwn')];
+
+function openServiceList() {
+    if (openerList.length) {
+        openerList.forEach((btn) => {
+            btn.addEventListener('click', () => {
+                btn.classList.toggle('open');
+            })
+        })
+    }
+}
+
+openServiceList();
+
+//open services list
 
 $('.go-map').click(function (e) {
     e.preventDefault();

@@ -475,7 +475,9 @@
   padding: 10px 0 110px;
   box-sizing: border-box;
 }
-
+.catalog-head__list {
+  display: none;
+}
 .catalog-event__head {
   display: flex;
   flex-direction: column;
@@ -1913,7 +1915,7 @@
     margin-bottom: 26px;
   }
   .catalog-event__head p {
-    padding-top: 30px;
+    padding-top: 70px;
     margin-bottom: 20px;
     font-size: 22px;
     line-height: 1.2;
@@ -2243,11 +2245,55 @@
   }
 
   .event-single-price {
+    padding-bottom: 0;
+    .line {
+      display: none;
+    }
     > p {
       max-width: 100%;
       width: 100%;
-      margin-bottom: 15px;
-      text-align: center;
+      margin-bottom: 0px;
+      text-align: left;
+      padding: 25px 15px 25px 0;
+      box-sizing: border-box;
+      border-top: 1px solid #E6E6E6;
+      position: relative;
+      cursor: pointer;
+      &::before, &::after {
+        width: 14px;
+        height: 1px;
+        background: #23514C;
+        display: inline-block;
+        content: '';
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translate(0, 0);
+      }
+      &::after {
+        transform: rotate(90deg);
+      }
+    }
+    .text {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.7s ease;
+    }
+    &.open {
+      padding-bottom: 40px;
+      > p {
+        &::after {
+          opacity: 0;
+        }
+        &::before {
+          background: #E0C18D;
+        }
+      }
+      .text {
+        max-height: 1200px;
+        transition: max-height 1.2s ease;
+
+      }
     }
 
     .text {
@@ -2304,7 +2350,7 @@
 
   }
   .catalog-event__head p {
-    padding-top: 26px;
+    padding-top: 70px;
     margin-bottom: 14px;
     font-size: 20px;
     line-height: 1.2;
@@ -2357,14 +2403,110 @@
 }
 
 @media screen and (max-width: 650px) {
+  .catalog-event__head {
+    position: relative;
+    z-index: 3;
+    > ul {
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      transition: opacity 0.3s ease, visibility 0.3s ease;
+      box-shadow: 0 0 9px 3px rgba(18, 18, 18, 0.18);
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: #FFFFFF;
+      border: 1px solid #E6E6E6;
+      padding: 7px 15px;
+      box-sizing: border-box;
+      z-index: 2;
+      gap: 0;
+      li {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        margin-bottom: 6px;
+        &:last-child {
+          margin-bottom: 0;
+        }
+        a {
+          width: 100%;
+          font-size: 14px;
+        }
+        &::after, &::before {
+          content: none;
+        }
+      }
+    }
+  }
+
+  .catalog-head__list {
+    background: #FFFFFF;
+    border: 1px solid #E6E6E6;
+    box-sizing: border-box;
+    border-radius: 4px;
+    padding: 7px 15px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+    p {
+      all: initial;
+      font-family: $second-font;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 18px;
+      letter-spacing: 0.05em;
+      color: #A9A9A9;
+      &::before {
+        content: none;
+      }
+    }
+    span {
+      all: initial;
+      font-family: $second-font;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 25px;
+      color: #3A3A3A;
+    }
+    &::after {
+      width: 11px;
+      height: 6px;
+      display: inline-block;
+      content: '';
+      background: url("../img/arr-down.svg") no-repeat center / 100%;
+      position: absolute;
+      right: 15px;
+      top: 50%;
+      transform: translate(0, -50%);
+    }
+    &.open {
+      & + ul {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+      }
+      &::after {
+        transform: translate(0, -50%) rotate(180deg);
+
+      }
+    }
+  }
 
   .event-history .gal-left::after {
     content: none !important;
   }
 
   .event-prices > p {
-    font-size: 20px;
+    font-size: 28px;
     line-height: 1.2;
+    font-weight: 600;
   }
   .event-single-price .text ul li p {
     font-size: 22px;
@@ -2383,12 +2525,14 @@
       width: 100%;
 
       span {
-        right: 50%;
-        top: 100%;
-        transform: translate(50%, -50%);
+        right: auto;
+        left: 15px;
+        top: 15px;
+        transform: none;
         font-size: 14px;
 
         &::after {
+          content: none;
           width: 1px;
           height: 20px;
           right: 50%;
@@ -2577,9 +2721,9 @@
     gap: 15px;
   }
   .event-history .text h2 {
-    font-size: 18px;
+    font-size: 28px;
     line-height: 1.1;
-    text-align: center;
+    text-align: left;
   }
   .single-catalog-card {
     width: 80%;
