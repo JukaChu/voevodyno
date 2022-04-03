@@ -12,6 +12,9 @@
   max-width: 595px;
   width: 100%;
   margin: 0 auto 150px;
+  &.about-head--rooms {
+    max-width: 930px;
+  }
   &::before {
     width: 28px;
     height: 19px;

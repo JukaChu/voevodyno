@@ -631,6 +631,93 @@ seasonsSlider();
 
 //four seasons
 
+let eventGal = [...document.querySelectorAll('.catalog-event__content.js-slider')];
+
+function eventGalSlider() {
+    if (!eventGal.length) {
+
+    } else {
+        if (window.innerWidth > 705) {
+
+        } else {
+            eventGal.forEach((sld) => {
+                let sldCont = sld.querySelector('.event-gallery');
+
+                let pagin = sld.querySelector('.dots');
+                const swiper2 = new Swiper(sldCont, {
+                    // Optional parameters
+                    loop: false,
+                    slidesPerView: 1,
+                    slidesPerGroup: 1,
+                    speed: 600,
+                    spaceBetween: 10,
+                    enabled: true,
+
+                    pagination: {
+                        el: pagin,
+                        type: 'bullets',
+                        bulletActiveClass: 'active',
+                        bulletClass: 'single-dot',
+                        bulletElement: 'div',
+                        clickable: true,
+                        currentClass: 'current',
+                        spaceBetween: 2,
+                    },
+
+
+                });
+            })
+        }
+
+    }
+}
+
+eventGalSlider();
+//gall photo
+
+let photoGal = [...document.querySelectorAll('.gallery-page.js-slider')];
+
+function photoGalSlider() {
+    if (!photoGal.length) {
+
+    } else {
+        if (window.innerWidth > 705) {
+
+        } else {
+            photoGal.forEach((sld) => {
+                let sldCont = sld.querySelector('.gallery-page__block');
+
+                let pagin = sld.querySelector('.dots');
+                const swiper2 = new Swiper(sldCont, {
+                    // Optional parameters
+                    loop: false,
+                    slidesPerView: 1,
+                    slidesPerGroup: 1,
+                    speed: 600,
+                    spaceBetween: 10,
+                    enabled: true,
+
+                    pagination: {
+                        el: pagin,
+                        type: 'bullets',
+                        bulletActiveClass: 'active',
+                        bulletClass: 'single-dot',
+                        bulletElement: 'div',
+                        clickable: true,
+                        currentClass: 'current',
+                        spaceBetween: 2,
+                    },
+
+
+                });
+            })
+        }
+
+    }
+}
+
+photoGalSlider();
+//gall photo
 //sliders
 
 //faq open
@@ -996,6 +1083,50 @@ function openServiceList() {
 openServiceList();
 
 //open services list
+//change tab book list
+
+let ulBookList = [...document.querySelectorAll('.room-book__list ul li')];
+let ulBookTabs = [...document.querySelectorAll('.room-book_single')];
+
+function changeBookList() {
+    if (ulBookList.length) {
+        ulBookList.forEach((btn, k) => {
+            btn.addEventListener('click', () => {
+                if (btn.classList.contains('active')) {
+
+                } else {
+                    let dropBook = btn.closest('.room-book__list').querySelector('.catalog-head__list')
+
+                    ulBookList.forEach((btn2, l) => {
+                        if (btn2.classList.contains('active')) {
+                            btn2.classList.remove('active');
+
+                        }
+                    });
+                    ulBookTabs.forEach((tab, m) => {
+                        if (tab.classList.contains('active')) {
+                            tab.classList.remove('active');
+
+                        }
+
+                    });
+                    ulBookTabs.forEach((tab2, n) => {
+                        if (n === k) {
+                            tab2.classList.add('active');
+                        }
+                    });
+                    btn.classList.add('active');
+                    dropBook.classList.remove('open');
+                    let btnText = btn.innerHTML;
+                    dropBook.querySelector('span').innerHTML = btnText;
+                }
+            })
+        })
+    }
+}
+
+changeBookList();
+//change tab book list
 
 $('.go-map').click(function (e) {
     e.preventDefault();

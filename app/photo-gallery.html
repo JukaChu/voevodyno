@@ -39,13 +39,66 @@
 
         </div>
     </section>
-   <section class="gallery-page">
-       <div class="container">
-           <div class="gallery-page__block">
+    <section class="gallery-page js-slider">
+        <div class="container">
+            <div class="gallery-page__block swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img data-fancybox href="./img/gal/i-1.jpg" src="./img/gal/i-1.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img data-fancybox href="./img/gal/i2.jpg" src="./img/gal/i2.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img data-fancybox href="./img/gal/i3.jpg" src="./img/gal/i3.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img data-fancybox href="./img/gal/i4.jpg" src="./img/gal/i4.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img data-fancybox href="./img/gal/i5.jpg" src="./img/gal/i5.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img data-fancybox href="./img/gal/i6.jpg" src="./img/gal/i6.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img data-fancybox href="./img/gal/i7.jpg" src="./img/gal/i7.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img data-fancybox href="./img/gal/i8.jpg" src="./img/gal/i8.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img data-fancybox href="./img/gal/i9.jpg" src="./img/gal/i9.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img data-fancybox href="./img/gal/i10.jpg" src="./img/gal/i10.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img data-fancybox href="./img/gal/i11.jpg" src="./img/gal/i11.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img data-fancybox href="./img/gal/i12.jpg" src="./img/gal/i12.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img data-fancybox href="./img/gal/i13.jpg" src="./img/gal/i13.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img data-fancybox href="./img/gal/i15.jpg" src="./img/gal/i15.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img data-fancybox href="./img/gal/i16.jpg" src="./img/gal/i16.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img data-fancybox href="./img/gal/i2.jpg"src="./img/gal/i17.jpg" alt="">
+                    </div>
 
-           </div>
-       </div>
-   </section>
+                </div>
+
+
+            </div>
+            <div class="dots"></div>
+        </div>
+    </section>
     <section class="popular-rest">
         <div class="container">
             <div class="line">
@@ -107,6 +160,24 @@
 //= details/footer.html
 //= details/modals.html
 //= details/scripts.html
+<script src="https://masonry.desandro.com/masonry.pkgd.js" type="text/javascript">
+
+</script>
+<script>
+    function masonryStartGal() {
+        if (window.innerWidth > 705) {
+            $('.gallery-page__block').masonry({
+                itemSelector: '.swiper-slide',
+                columnWidth: '.swiper-slide',
+                gutter: 20
+            });
+        }
+    }
+
+    masonryStartGal();
+    // layout Masonry after each image loads
+
+</script>
 
 </body>
 </html>
