@@ -310,7 +310,6 @@ openLangMenu();
 
 //sliders
 
-
 let homeSld = [...document.querySelectorAll('.js-slider.cat-hero')];
 
 function homeSlider() {
@@ -738,6 +737,24 @@ openFaq();
 
 //faq open
 
+//fprice open
+
+let spaHead = [...document.querySelectorAll('.spa-head')];
+
+function openSpaPrice() {
+    if (spaHead.length) {
+        spaHead.forEach((btn) => {
+            btn.addEventListener('click', () => {
+                btn.classList.toggle('opened');
+            })
+        })
+    }
+}
+
+openSpaPrice();
+
+//price open
+
 
 $('input.phone-number').each(function () {
 
@@ -791,14 +808,14 @@ openCloseDevHead();
 
 
 //modals
-let carrMod = [...document.querySelectorAll('.mod--carr')];
+let carrMod = [...document.querySelectorAll('.mod--order')];
 
 function openCarrMod() {
     if (carrMod.length) {
         carrMod.forEach((btn) => {
             btn.addEventListener('click', (e) => {
                 e.preventDefault();
-                document.querySelector('.modal-window--carr').classList.add('active');
+                document.querySelector('.modal-window--order').classList.add('active');
                 document.body.classList.add('no-scroll');
             })
         })
@@ -806,6 +823,22 @@ function openCarrMod() {
 }
 
 openCarrMod();
+
+let certMod = [...document.querySelectorAll('.mod--cert')];
+
+function openCertMod() {
+    if (certMod.length) {
+        certMod.forEach((btn) => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                document.querySelector('.modal-window--cert').classList.add('active');
+                document.body.classList.add('no-scroll');
+            })
+        })
+    }
+}
+
+openCertMod();
 
 //modals
 let writeMod = [...document.querySelectorAll('.mod--write')];
