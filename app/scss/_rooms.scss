@@ -12,6 +12,43 @@
 .photo-slider__cont {
   width: 100%;
   margin-top: 50px;
+
+  .swiper-wrapper {
+    display: flex;
+    align-items: stretch;
+  }
+
+  .swiper-slide {
+    height: auto;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    display: flex;
+
+
+    .photo-slide {
+      border-radius: 4px 4px 0px 0px;
+    }
+
+    p {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+
+      flex-grow: 1;
+      padding: 30px;
+      width: 100%;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 25px;
+      color: #3A3A3A;
+      box-sizing: border-box;
+      font-family: $second-font;
+      background: #F8F4EE;
+      border-radius: 0px 0px 4px 4px;
+    }
+  }
 }
 
 .photo-slide {
@@ -154,6 +191,7 @@ main > .container > .about-head {
       &:last-child {
         margin-bottom: 0;
       }
+
       li {
         width: 100%;
         padding-left: 23px;
@@ -1269,9 +1307,18 @@ main > .container > .about-head {
     }
   }
   .photo-slide {
-    width: 70%;
+    width: 100%;
     flex-shrink: 0;
     height: 190px;
+  }
+  .photo-slider__cont {
+    .swiper-slide {
+      p {
+        padding: 20px 10px;
+        font-size: 14px;
+        line-height: 1.1;
+      }
+    }
   }
   .room-include {
     margin-top: 10px;

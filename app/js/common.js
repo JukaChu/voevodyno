@@ -1021,9 +1021,12 @@ function goToItemsSides() {
 goToItemsSides();
 
 $(".go-price").click(function () {
-    $([document.documentElement, document.body]).animate({
-        scrollTop: $(".prices-js").offset().top - 150
-    }, 500);
+    if ( document.querySelector(".prices-js")) {
+        $([document.documentElement, document.body]).animate({
+            scrollTop: $(".prices-js").offset().top - 150
+        }, 500);
+    }
+
 });
 
 
@@ -1168,3 +1171,26 @@ $('.go-map').click(function (e) {
         scrollTop: $("#map-road").offset().top - 50
     }, 500);
 });
+
+//open calendar block mob
+
+let openerCalendar = [...document.querySelectorAll('.calendar-month .calendar-day .close')];
+let closerCalendar = document.querySelector('.calendar-month >.close');
+
+function openCloseCalendar() {
+    if (openerCalendar.length) {
+        openerCalendar.forEach((btn) => {
+            btn.addEventListener('click', () => {
+                btn.closest('.calendar-day').classList.add('opened');
+                btn.closest('.calendar-month').classList.add('opened');
+            })
+        });
+        closerCalendar.addEventListener('click', () => {
+            closerCalendar.closest('.calendar-month').classList.remove('opened');
+            closerCalendar.closest('.calendar-month').querySelector('.calendar-day.opened').classList.remove('opened');
+        })
+    }
+}
+openCloseCalendar();
+
+//open calendar block mob
