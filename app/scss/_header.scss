@@ -549,6 +549,19 @@
   .hidden-cont {
     display: none ;
   }
+  .menu-column ul{
+    flex-direction: row;
+    writing-mode: vertical-lr;
+    max-height: 228px;
+    flex-wrap: wrap;
+    gap: 75px 0;
+    li {
+      writing-mode: initial;
+    }
+  }
+  .sub-menu {
+    justify-content: flex-end;
+  }
 }
 @media screen and (max-width: 992px) {
   .header {

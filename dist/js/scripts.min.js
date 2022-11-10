@@ -1032,6 +1032,71 @@ $(".go-price").click(function () {
 
 //open cat blog
 
+
+let roomsItems = [...document.querySelectorAll('.room-book_single')];
+let roomsSticky = document.querySelector('.room-book__list ul');
+let roomsItemsList = [...document.querySelectorAll('.room-book__list ul li')];
+
+function scrollingEventRooms() {
+    if (roomsItems.length) {
+        roomsItemsList.forEach((btn2, k) => {
+            btn2.addEventListener('click', () => {
+
+                $([document.documentElement, document.body]).animate({
+                    scrollTop: $(roomsItems[k]).offset().top - 200
+                }, 500);
+            })
+        });
+        roomsItems.forEach((rom, k) => {
+            let tabs = [...rom.querySelectorAll('.tabs-text ul li')];
+            let tabsItems = [...rom.querySelectorAll('.text-tab')];
+            tabs.forEach((tab, l) => {
+                tab.addEventListener('click', () => {
+                    tabs.forEach((tab2) => {
+                        tab2.classList.remove('active');
+                    });
+                    tabsItems.forEach((tab3) => {
+                        tab3.classList.remove('active');
+                    });
+                    tab.classList.add('active');
+                    tabsItems[l].classList.add('active');
+                })
+            })
+        })
+    }
+}
+scrollingEventRooms();
+
+function scrollingRooms() {
+    if (roomsItems.length) {
+        let hSticky = roomsSticky.offsetHeight;
+        roomsItems.forEach((btn, k) => {
+            let toTop = btn.getBoundingClientRect().top;
+            let toHeight = btn.offsetHeight;
+
+
+
+
+            if (toTop < toHeight + 200 && toTop + toHeight > 400) {
+
+                btn.classList.add('active');
+                roomsItemsList[k].classList.add('active');
+            } else {
+                btn.classList.remove('active');
+                roomsItemsList[k].classList.remove('active');
+            }
+
+        })
+    }
+}
+window.addEventListener('scroll', () => {
+    scrollingRooms();
+});
+
+scrollingRooms();
+
+
+
 let btnCatBlog = [...document.querySelectorAll('.blog-cat-btn')];
 let catBlogPopup = document.querySelector('.cat-blog-popup');
 
