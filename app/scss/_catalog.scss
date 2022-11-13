@@ -692,6 +692,64 @@
     flex-direction: column;
     gap: 0;
   }
+
+}
+.our-team {
+  width: 100%;
+  .title {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.our-team__block {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  .img {
+    width: 100%;
+    padding-top: 45%;
+    height: 0;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 15px;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+  .text {
+    width: 100%;
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background: url(../img/ab-bg2.svg) no-repeat right center/auto 100%, #F8F4EE;
+
+    p {
+      max-width: 746px;
+
+
+      font-style: normal;
+      font-weight: 600;
+      font-size: 22px;
+      line-height: 28px;
+      text-align: center;
+      color: #23514C;
+
+      margin-bottom: 20px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
 }
 
 @media screen and (min-width: 1161px) {
@@ -775,22 +833,25 @@
         width: 100%;
 
         .text {
+          position: relative;
+          &::after {
+            width: 1px;
+            left: -20px;
+            height: 140px;
+            display: inline-block;
+            content: '';
+            background: #E0C18D;
+            position: absolute;
+            top: 20px;
+
+            transform: translate(0, -100%);
+          }
           h2 {
-            position: relative;
+          &:after {
+            content: none !important;
+          }
 
-            &::after {
-              width: 1px;
-              left: -20px;
-              height: 100px;
-              display: inline-block;
-              content: '';
-              background: #E0C18D;
-              position: absolute;
-              top: auto;
-              bottom: 50%;
 
-              transform: translate(0);
-            }
           }
         }
       }
@@ -1208,7 +1269,7 @@
 
   .left {
     flex-shrink: 0;
-    width: 55%;
+    width:calc(50% + (55px / 2));
     margin-right: 20px;
     padding-right: 75px;
     box-sizing: border-box;
@@ -1493,6 +1554,7 @@
 
 @media screen and (min-width: 706px) {
 
+
   .event-gallery {
     .swiper-wrapper {
       width: 100%;
@@ -1508,6 +1570,14 @@
 }
 
 @media screen and (max-width: 705px) {
+  .our-team__block .text {
+    padding: 20px;
+    p {
+      margin-bottom: 10px;
+      font-size: 14px;
+      line-height: 1.2;
+    }
+  }
   .additive-room {
     & + .title {
       margin-top: 40px;
@@ -3393,6 +3463,7 @@
 }
 
 @media screen and (max-width: 1160px) {
+
   .single-speaker span {
     font-size: 16px;
     line-height: 1.2;

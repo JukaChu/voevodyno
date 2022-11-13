@@ -132,6 +132,12 @@
       }
     }
   }
+  &.event-history--top {
+    .left {
+
+      transform: translate(0, -250px);
+    }
+  }
 }
 .about-gallery {
   width: 100%;
@@ -250,6 +256,15 @@
   }
 }
 @media screen and (max-width: 1200px) {
+  .event-history--reverse .right h2:first-child::after {
+    content: '';
+  }
+  .event-history .right h2:first-child::after {
+    content: '';
+  }
+  .event-history.event-history--top .left {
+    transform: translate(0, -170px);
+  }
   .about-banner + .popular-rest {
     margin-top: 60px;
   }
@@ -276,6 +291,9 @@
   }
 }
 @media screen and (max-width: 992px) {
+  .event-history.event-history--top .left {
+    transform: translate(0, 0);
+  }
   .iframe-map {
     height: 320px;
   }

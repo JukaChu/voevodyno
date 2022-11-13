@@ -379,6 +379,20 @@
   justify-content: flex-start;
   gap: 75px;
   counter-reset: my-awesome-counter2;
+  &.guest-advantages--four {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    .single-guest-advantage {
+      width: calc(25% - (60px / 4));
+      p {
+        margin-bottom: 15px;
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
 }
 
 .single-guest-advantage {
@@ -412,7 +426,29 @@
     font-size: 16px;
     line-height: 25px;
     letter-spacing: 0.05em;
-    color: #3A3A3A
+    color: #3A3A3A;
+
+    small {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 26px;
+      letter-spacing: 0.05em;
+      color: #73A697;
+      margin-bottom: 15px;
+      font-family: $second-font;
+    }
+    strong {
+      font-style: normal;
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 18px;
+      letter-spacing: 0.05em;
+      color: #A9A9A9;
+      padding: 2px 10px;
+      background: #F8F4EE;
+      border-radius: 4px;
+    }
   }
 
   span {
@@ -454,6 +490,15 @@
 }
 
 @media screen and (max-width: 1200px) {
+  .guest-advantages.guest-advantages--four .single-guest-advantage p {
+    margin-bottom: 6px;
+    small {
+      font-size: 15px;
+    }
+    strong {
+      font-size: 9px;
+    }
+  }
 
   .single-guest-advantage p {
     font-size: 14px;
@@ -490,6 +535,15 @@
 }
 
 @media screen and (max-width: 992px) {
+  .guest-advantages.guest-advantages--four .single-guest-advantage {
+    width: calc((100% / 3) - (40px / 3));
+    p {
+      line-height: 1.2 !important;
+      small {
+        line-height: 1.1;
+      }
+    }
+  }
   .main-calendar__head {
     margin-bottom: 35px;
   }
@@ -586,6 +640,9 @@
 }
 
 @media screen and (max-width: 740px) {
+  .guest-advantages.guest-advantages--four .single-guest-advantage {
+    width: calc(50% - 10px);
+  }
   .calendar-month .calendar-day {
     padding: 5px;
   }
@@ -608,6 +665,15 @@
 }
 
 @media screen and (max-width: 600px) {
+  .guest-advantages.guest-advantages--four .single-guest-advantage {
+    width: 100%;
+    p {
+      line-height: 1.1 !important;
+      small {
+        line-height: 1.1;
+      }
+    }
+  }
   .single-guest-advantage {
     p {
       line-height: 1.1;
