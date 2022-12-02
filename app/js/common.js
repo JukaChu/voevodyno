@@ -21,6 +21,50 @@ window.onscroll = function () {
 
 };
 
+//menu margin right
+
+let menuItem = [...document.querySelectorAll('.bot-menu .has-item')];
+
+function getMarginRight() {
+    if (menuItem.length) {
+        let windowWidth = window.innerWidth;
+        // console.log(windowWidth);
+        menuItem.forEach((btn, k) => {
+
+            let fromRightToLeft = btn.getBoundingClientRect().right;
+            let fromRightToRight = windowWidth - fromRightToLeft + btn.offsetWidth;
+
+            let lastList = btn.querySelector('.menu-column:last-child');
+
+            let wLast = lastList.offsetWidth;
+
+            let wLastToRight =  windowWidth - lastList.getBoundingClientRect().right;
+
+            let mrToRight = fromRightToRight - wLastToRight  - wLast;
+            // console.log(mrToRight);
+            // console.log(wLast);
+            if (wLast > fromRightToRight) {
+
+            } else {
+                console.log(btn);
+                console.log(wLast);
+                console.log(fromRightToRight);
+                lastList.style.marginRight = `${mrToRight}px`;
+
+            }
+
+
+        })
+    }
+}
+getMarginRight();
+
+window.addEventListener('resize', () => {
+    getMarginRight();
+});
+
+//menu margin right
+
 function checkScrollDir() {
     newValue = window.pageYOffset;
     // console.log(window.pageYOffset + ' pageoffset')
